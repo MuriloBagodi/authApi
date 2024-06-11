@@ -1,0 +1,31 @@
+{
+  "name": "auth",
+  "version": "1.0.0",
+  "description": "auth-micro-service-ferrari-club-sp",
+  "main": "server.ts",
+  "scripts": {
+    "test": "bun test",
+    "start:dev": "bun server.ts",
+    "start:prod": "npm i bun -g --save & bun server.ts",
+    "knex": "node --no-warnings --import tsx ./node_modules/.bin/knex"
+  },
+  "author": "Murilo Salvador Bagodi",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/cookie": "^9.3.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.27.0",
+    "knex": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.15.2",
+    "typescript": "^5.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
+    "@types/node": "^20.14.2",
+    "eslint": "^9.4.0",
+    "pg": "^8.12.0",
+    "sqlite3": "^5.1.7"
+  }
+}
