@@ -16,7 +16,6 @@ export const userRoutes = async (app: FastifyInstance) => {
   app.get("/", { preHandler: [app.authenticate] }, getUsers)
 
   //Login route
-
   app.post('/login', {
     schema: {
       body: $ref("loginSchema"),
@@ -26,9 +25,8 @@ export const userRoutes = async (app: FastifyInstance) => {
     }
   }, login)
 
+  //Logout route
   app.delete("/logout", {preHandler: [app.authenticate]} ,logout)
 
   app.log.info("User Routes Registred")
-
-
 }

@@ -15,6 +15,8 @@ export async function createUser(req: FastifyRequest<{ Body: CreateUserInput }>,
     return res.status(401).send({ message: "User Already exist with this email" })
   }
 
+  validateEmail(email)
+
   try {
     const hash = bcrypt.hashSync(password, env.SALT_ROUNDS)
     await knex('users').insert({
